@@ -20,7 +20,11 @@ module.exports = defineConfig({
   devServer: {
     port: 8080,
     allowedHosts: [
+      'localhost:8000',
+      'localhost',
       '127.0.0.1:8000',
+      '0.0.0.0:8000',
+      '0.0.0.0',
       '127.0.0.1'
     ],
     devMiddleware: {
