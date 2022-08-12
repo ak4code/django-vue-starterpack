@@ -1,5 +1,7 @@
 # node.js
+.DS_Store
 node_modules
+/dist
 
 # Django stuff:
 *.log
@@ -15,7 +17,18 @@ __pycache__/
 .env
 venv
 
-#IDE
+# Editor directories and files
 .idea
 .vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
