@@ -1,14 +1,14 @@
 version: "3.9"
 
 services:
-  #  db:
-  #    image: postgres:14.5-alpine
-  #    ports:
-  #      - 5432:5432
-  #    volumes:
-  #      - postgres_data:/var/lib/postgresql/data/
-  #    env_file:
-  #      - ./.env_db
+  db:
+    image: postgres:14.5-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env_db
   client:
     build: ./client
     command: npm run serve
@@ -26,7 +26,7 @@ services:
       - 8000:8000
     depends_on:
       - client
-#      - db
+      - db
 
-#volumes:
-#  postgres_data:
+volumes:
+  postgres_data:
