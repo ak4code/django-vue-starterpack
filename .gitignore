@@ -1,7 +1,7 @@
 # node.js
 .DS_Store
 node_modules
-/dist
+client/dist
 
 # Django stuff:
 *.log
