@@ -1,1 +1,1 @@
-"# django-vue-starterpack" 
+# django-vue-starterpack

@@ -6,7 +6,6 @@ module.exports = defineConfig({
   css: {
     extract: true
   },
-  outputDir: process.env.NODE_ENV !== 'production' ? 'dist' : '../server/static',
   chainWebpack: config => {
     config.plugins.delete('html');
     config.plugins.delete('preload');
@@ -34,5 +33,6 @@ module.exports = defineConfig({
       'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization'
     }
   },
+  filenameHashing: false,
   runtimeCompiler: true
 });

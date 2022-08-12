@@ -1,0 +1,21 @@
+{% load manifest %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block site_title %}Django and Vue starterpack ✌{% endblock %}</title>
+  <meta name="description" content="{% block site_description %}Django and Vue starterpack{% endblock %}">
+  {% manifest_match '*.css' '<link href="{match}" rel="preload" as="style">' %}
+  {% manifest_match '*.js' '<link href="{match}" rel="preload" as="script">' %}
+  {% manifest_match '*.css' '<link href="{match}" rel="stylesheet">' %}
+  {% manifest_match 'favicon.svg' '<link rel="icon" href="{match}" type="image/svg+xml">' %}
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <div id="app">
+    {% block content %}{% endblock %}
+  </div>
+  {% manifest_match '*.js' '<script src="{match}"></script>' %}
+</body>
+</html>
