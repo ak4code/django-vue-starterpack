@@ -1,0 +1,21 @@
+# node.js
+node_modules
+
+# Django stuff:
+*.log
+db.sqlite3
+db.sqlite3-journal
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+venv
+
+#IDE
+.idea
+.vscode
+
